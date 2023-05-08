@@ -21,7 +21,7 @@ public class Account {
 
     public void withDraw(double amt) {
 
-        if (amt > 0) {
+        if (amt > 0 && amt < bal) {
 
             bal = bal - amt;
 
@@ -31,7 +31,7 @@ public class Account {
 
     public void deposit(double amt) {
 
-        if (amt > 0) {
+        if (amt > 0 && amt < bal) {
 
             bal = bal + amt;
 
@@ -46,8 +46,8 @@ class TestAccount {
     public static void main(String[] args) {
 
         Account a1 = new Account();
-        a1.setBal(21000);
-        a1.withDraw(1000);
+        a1.setBal(19000);
+        a1.withDraw(-800);
         System.out.println("getBalance = " + a1.getBal());
         a1.deposit(5000);
         System.out.println("getBalance = " + a1.getBal());
