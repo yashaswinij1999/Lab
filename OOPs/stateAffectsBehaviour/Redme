@@ -1,0 +1,70 @@
+# OOPS
+
+## State Affects Behaviours
+
+#### Create a Dog class. A Dog has a age (int) & name (String). Dogs can bark.
+
+#### If the age of the dog is less than 7, then it barks as many times as its age.
+
+#### If the age is =>7, then it will meow that many times.
+
+#### Implement the Dog class and test it in a Tester class
+
+```
+Dog.java
+
+Dog
+- int age
+- String name
+- bark(age)
+
+```
+
+#### Create an Account class. An Account has a balance (double), accNum (String). Implement
+
+#### functionalities for withDraw(), deposit() and checkBalance() in Account class. Pay attention
+
+#### to what will be the argument list and return data types for each method. Understand how
+
+#### state affects behaviour and vice-versa here.
+
+```
+Account.java
+
+Account
+- double bal ;
+- String accNum;
+
+- withDraw()
+  bal = bal - amt;
+    
+
+- deposit()
+  bal  = bal + amt;
+   
+- checkBalance();
+
+```
+
+####  Create a Person class. A Person has a name and age. A Person can dance. When you ask a 
+####  Person to dance, if his age < 30, he will do barathnatya and if his age is >=30 then he will do snake 
+####  he will do snake  dance
+
+```
+Person.java
+
+Person
+- String name;
+- int age;
+- dance()
+
+```
+#### WAM to test if a given number has a given digit in it.
+
+```
+Q4.java
+
+```
+
+
+
