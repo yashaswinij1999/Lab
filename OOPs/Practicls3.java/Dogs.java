@@ -1,4 +1,4 @@
-public class Dog {
+public class Dogs {
 
     private String name;
     private int size;
@@ -56,7 +56,7 @@ class TestDogs {
 
     public static void main(String[] args) {
 
-        Dog d1 = new Dog();
+        Dogs d1 = new Dogs();
         d1.setName("Ramu");
         System.out.println(" getname = " + d1.getName());
         d1.setSize(3);
