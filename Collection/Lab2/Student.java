@@ -1,5 +1,7 @@
 import java.sql.Struct;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -13,6 +15,10 @@ public class Student implements Comparable {
 
     public Student() {
 
+    }
+
+    public Student(int age) {
+        this.age = age;
     }
 
     public Student(String name) {
@@ -102,28 +108,27 @@ class TestStudent {
         Student st5 = new Student("Sahadeva", "5", 22);
         Student st6 = new Student("Arjuna", "1", 10);
 
-        
-
-        List<Student> l = new ArrayList<>();
+        StudentNameComparator snc = new StudentNameComparator();
+        List<Student> l = new ArrayList<Student>();
         l.add(st1);
         l.add(st2);
         l.add(st3);
         l.add(st4);
         l.add(st5);
         l.add(st6);
-        System.out.println("l ==== " + l);
+        // Collections.sort(l, snc);
+        // System.out.println("l ==== " + l);
 
-        Set<Student> s1 = new HashSet<>();
-        s1.add(st1);
-        s1.add(st2);
-        s1.add(st3);
-        s1.add(st4);
-        s1.add(st5);
-        s1.add(st6);
-        System.out.println("s1 === > " + s1);
-        
+        // Set<Student> s1 = new HashSet<>();
+        // s1.add(st1);
+        // s1.add(st2);
+        // s1.add(st3);
+        // s1.add(st4);
+        // s1.add(st5);
+        // s1.add(st6);
+        // System.out.println("s1 === > " + s1);
 
-        Set<Student> ts = new TreeSet<>();
+        Set<Student> ts = new TreeSet<>(snc);
         ts.add(st1);
         ts.add(st2);
         ts.add(st3);
@@ -132,5 +137,20 @@ class TestStudent {
         ts.add(st6);
         System.out.println("ts ===> " + ts);
 
+    }
+}
+
+class StudentNameComparator implements Comparator {
+
+    public int compare(Object o1, Object o2) {
+
+        if (o1 instanceof Student && o2 instanceof Student) {
+
+            Student s1 = (Student) o1;
+            Student s2 = (Student) o2;
+
+            return s1.compareTo(s2);
+        }
+        throw new IllegalArgumentException("Invalid reference");
     }
 }
