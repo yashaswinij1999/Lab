@@ -34,12 +34,13 @@ public class Q3 {
         Collections.sort(l);
         System.out.println("sorting with duplcates = " + l);
 
-        Set <String> ts = new TreeSet<>();
-        ts.addAll(l);
-        System.out.println("sorting without duplicates = " + ts);
+        Set <String> ts1 = new TreeSet<>();
+        ts1.addAll(l);
+        System.out.println("sorting without duplicates = " + ts1);
 
-        Set <String> ts = new TreeSet<>(slc);
-        System.out.println(" sort using string length comparison" + ts);
+        Set <String> ts2 = new TreeSet<>(slc);
+        ts2.addAll(l);
+        System.out.println(" sort using string length comparison" + ts2);
 
         Iterator<String> it = l.iterator();
         while(it.hasNext()){
