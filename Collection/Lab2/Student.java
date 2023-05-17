@@ -116,17 +116,17 @@ class TestStudent {
         l.add(st4);
         l.add(st5);
         l.add(st6);
-        // Collections.sort(l, snc);
-        // System.out.println("l ==== " + l);
+        System.out.println("l ==== " + l);
+        
 
-        // Set<Student> s1 = new HashSet<>();
-        // s1.add(st1);
-        // s1.add(st2);
-        // s1.add(st3);
-        // s1.add(st4);
-        // s1.add(st5);
-        // s1.add(st6);
-        // System.out.println("s1 === > " + s1);
+        Set<Student> s1 = new HashSet<>();
+        s1.add(st1);
+        s1.add(st2);
+        s1.add(st3);
+        s1.add(st4);
+        s1.add(st5);
+        s1.add(st6);
+        System.out.println("s1 === > " + s1);
 
         Set<Student> ts = new TreeSet<>(snc);
         ts.add(st1);
