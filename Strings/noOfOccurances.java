@@ -1,4 +1,4 @@
-/* 7. String s1 = “ramaramaramama” ; String s2 = “ma”; No of occurrences of s2 in s1; */
+/* if String s1 = “ramaramaramama” ; String s2 = “ma”; No of occurrences of s2 in s1; */
 
 public class noOfOccurances {
 
