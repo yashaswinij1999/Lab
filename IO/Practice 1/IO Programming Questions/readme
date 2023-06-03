@@ -36,3 +36,13 @@ replace this with eeess;
 TreeSet
 
 ```
+
+### 9) how copy one file path to another file path and read that copied file path contents to another file path
+
+```
+file path = C:/Users/yashu/Desktop/Demo/Inner Class
+another path = C:/Users/yashu/Desktop
+
+rama.txt contents is read and writen from file path to another path
+
+```
