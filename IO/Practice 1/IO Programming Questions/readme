@@ -28,9 +28,9 @@ replace this with eeess;
 
 ```
 
-### 8) A file contains huge numbers (could be decimal as well) per line. Find the average of the numbers.
+### 7) A file contains huge numbers (could be decimal as well) per line. Find the average of the numbers.
 
-### 9) Replace the contents of a file with the same content but in sorted manner. Remove duplicates.
+### 8) Replace the contents of a file with the same content but in sorted manner. Remove duplicates.
 
 ```
 TreeSet
