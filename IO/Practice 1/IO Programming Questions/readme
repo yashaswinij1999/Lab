@@ -28,8 +28,6 @@ replace this with eeess;
 
 ```
 
-### 7) WAP to search for all occ of a given string, given a path(could be a folder too)
-
 ### 8) A file contains huge numbers (could be decimal as well) per line. Find the average of the numbers.
 
 ### 9) Replace the contents of a file with the same content but in sorted manner. Remove duplicates.
