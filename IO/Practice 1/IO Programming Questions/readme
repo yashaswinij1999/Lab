@@ -35,6 +35,6 @@ replace this with eeess;
 ### 9) Replace the contents of a file with the same content but in sorted manner. Remove duplicates.
 
 ```
-LinkedHashSet
+TreeSet
 
 ```
