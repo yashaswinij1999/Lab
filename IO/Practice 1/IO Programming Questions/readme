@@ -1,0 +1,40 @@
+# Programming Questions
+
+### 1) WAP to read all content of a text file, given a path & then print to the monitor
+
+### 2) WAP to take a search string & path as input & then print all the lines, line numbers of the lines that contain
+
+### the search string.
+
+### 3) WAP to read a file that contains one word per line & display it in sorted manner
+
+### 4) WAP to edit a given input with another in a given path (and with &)
+
+```
+replace (and with &);
+
+```
+
+### 5) A file contains student info. Each line contains 1 student info in this format name:dob:email:std:rank.
+
+### Create a java menu program to give the ability to the user to a) insert student records b) search c) remove
+
+### student d) list students based on sorting by i) name ii) dob iii) rank
+
+### 6) WAP to search all occ & replace it with another given the inputs
+
+```
+replace this with eeess;
+
+```
+
+### 7) WAP to search for all occ of a given string, given a path(could be a folder too)
+
+### 8) A file contains huge numbers (could be decimal as well) per line. Find the average of the numbers.
+
+### 9) Replace the contents of a file with the same content but in sorted manner. Remove duplicates.
+
+```
+LinkedHashSet
+
+```
