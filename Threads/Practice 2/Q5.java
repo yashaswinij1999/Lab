@@ -13,11 +13,17 @@ public class Q5 {
 
         try {
 
-            LetterCounterJob lcj = new LetterCounterJob("C:/Users/yashu/Desktop/Demo/Rama.txt");
+            LetterCounterJob lcj = new LetterCounterJob("C:/Users/yashu/Desktop/Demo/sita.txt");
             Thread t1 = new Thread(lcj);
             t1.start();
             t1.join();
             System.out.println("no of letters in a file = " + lcj.getLetterCount());
+
+            NextPrimeJob npj = new NextPrimeJob(10000000L);
+            Thread t2 = new Thread(npj);
+            t2.start();
+            t2.join();
+            System.out.println("the randomly generated primenumber  = " + npj.getPrime());
 
         } catch (Exception e) {
 
@@ -25,7 +31,7 @@ public class Q5 {
             e.printStackTrace();
 
         }
-        System.out.println(" main ending ");
+        System.out.println("main ending ");
 
     }
 
@@ -65,7 +71,7 @@ class LetterCounterJob implements Runnable {
 
                     char c = line.charAt(i);
 
-                    if (c >= 97 && c <= 123) {
+                    if (c >= 97 && c <= 123 || c >= 65 && c <= 91) {
                         letterCount++;
                     }
 
@@ -96,4 +102,58 @@ class LetterCounterJob implements Runnable {
 
     }
 
+}
+
+class NextPrimeJob implements Runnable {
+
+    private long primeNumber;
+    long getPrimeNumber;
+
+    public NextPrimeJob(long number) {
+
+        this.primeNumber = number;
+
+    }
+
+    public long getPrime() {
+
+        return getPrimeNumber;
+
+    }
+
+    @Override
+    public void run() {
+
+        // TODO Auto-generated method stub
+        long randomNumber = (long) (Math.random() * 10000000L);
+
+        if (randomNumber < primeNumber) {
+
+            if (randomNumber == 0 || randomNumber == 1) {
+                System.out.println("random number is less than zero");
+                return;
+            }
+
+            if (randomNumber == 2 || randomNumber == 3 || randomNumber == 5 || randomNumber == 7) {
+                getPrimeNumber = randomNumber;
+                return;
+            }
+
+            if ((randomNumber & 1) == 0) {
+                System.out.println("the random is even");
+                return;
+            }
+
+            for (long i = 3; i < (long) (Math.sqrt(randomNumber) + 1); i += 2) {
+
+                if (randomNumber % i == 0) {
+                    System.out.println(" is not prime");
+                    return;
+                }
+
+            }
+            getPrimeNumber = randomNumber;
+        }
+
+    }
 }
