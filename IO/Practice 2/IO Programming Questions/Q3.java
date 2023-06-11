@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 // C:/Users/yashu/Desktop/Yashu/Lab/IO/Practice 1/IO Programming Questions/IOProgrammingQuestions.txt
 
-public class Q3 {
+public class Q4 {
 
     public static void main(String[] args) {
 
