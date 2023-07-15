@@ -14,7 +14,6 @@ public class JDBCHelper {
 
             Class.forName(JDBCConstants.DRIVER);
             con = DriverManager.getConnection(JDBCConstants.URL, JDBCConstants.USERID, JDBCConstants.PASSWORD);
-            System.out.println(con);
             return con;
 
         } catch (SQLException | ClassNotFoundException e) {
@@ -78,19 +77,6 @@ public class JDBCHelper {
             e.printStackTrace();
 
         }
-
-    }
-
-}
-
-class Test1 {
-
-    public static void main(String[] args) {
-
-        JDBCHelper j = new JDBCHelper();
-        Connection con = JDBCHelper.getConnection();
-        System.out.println(con);
-        JDBCHelper.close(con);
 
     }
 
