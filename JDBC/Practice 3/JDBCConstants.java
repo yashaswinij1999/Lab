@@ -1,4 +1,4 @@
-public class JDBCConstants {
+public interface JDBCConstants {
 
     public static final String DRIVER = "org.hsqldb.jdbc.JDBCDriver";
     public static final String URL = "jdbc:hsqldb:hsql://localhost/";
