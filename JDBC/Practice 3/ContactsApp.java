@@ -23,12 +23,11 @@ public class ContactsApp {
         Connection con = null;
         ResultSet rs = null;
         PreparedStatement insert = null, update = null, delete = null, select = null;
-        PreparedStatement ph_insert = null, ph_select = null;
+        PreparedStatement ph_insert = null, ph_delete = null;
 
         try {
 
             con = JDBCHelper.getConnection();
-            con.setAutoCommit(false);
 
             while (ch != 5) {
 
@@ -45,6 +44,7 @@ public class ContactsApp {
                 switch (ch) {
 
                     case 1:
+                        con.setAutoCommit(false);
                         sql = "insert into contactsApp(name,email,dob,crtdate)values (?,?,?,?)";
 
                         System.out.println("enter name");
@@ -121,15 +121,54 @@ public class ContactsApp {
                         break;
 
                     case 2:
+
                         System.out.println("to delete");
+
+                        System.out.println("enter the name where you want to delete");
+                        name = sc1.next();
+
+                        sql = "delete from contactsApp where name = ?";
+
+                        delete = con.prepareStatement(sql);
+                        delete.setString(1, name);
+                        delete.execute();
+
                         break;
 
                     case 3:
                         System.out.println("update");
+
+                        System.out.println("enter the email");
+                        email = sc1.next();
+
+                        System.out.println("enter name");
+                        name = sc1.next();
+
+                        sql = "update contactsApp set email = ? where name = ?";
+                        update = con.prepareStatement(sql);
+
+                        System.out.println(email + "" + name);
+
+                        update.setString(1, email);
+                        update.setString(2, name);
+                        update.execute();
+
                         break;
 
                     case 4:
                         System.out.println("to select");
+                        sql = "select * from contactsapp";
+                        select = con.prepareStatement(sql);
+                        select.execute();
+
+                        rs = select.getResultSet();
+                        while (rs.next()) {
+
+                            name = rs.getString("name");
+                            email = rs.getString("email");
+                            System.out.println(" name : " + name + " email :" + email);
+                        }
+
                         break;
 
                     default:
@@ -148,8 +187,25 @@ public class ContactsApp {
             // TODO: handle exception
             e.printStackTrace();
 
-        }
+        } finally {
 
+            try {
+
+                JDBCHelper.close(con);
+                JDBCHelper.close(rs);
+                JDBCHelper.close(delete);
+                JDBCHelper.close(select);
+                JDBCHelper.close(update);
+                JDBCHelper.close(insert);
+
+            } catch (Exception e) {
+
+                // TODO: handle exception
+                e.printStackTrace();
+
+            }
+
+        }
     }
 
 }
