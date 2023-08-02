@@ -2,16 +2,12 @@ public class Q7 {
 
     public static void main(String[] args) {
 
-        int a = 20;
-        int b = 30;
-        int c = a * b;
-        System.out.println("c ===> " + c);
+        for (int i = 0; i <= 100; i++) {
 
-        double d = 12458.2;
-        double e = 1458.2;
-        double f = d * e;
-        System.out.println("f==> " + f);
-
+            if (i % 3 != 0) {
+                System.out.println("i = " + i);
+            }
+        }
     }
 
 }
