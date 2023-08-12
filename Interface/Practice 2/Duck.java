@@ -8,9 +8,17 @@ public class Duck {
 
     public Duck(int size) {
 
-        this.size = size;
-        count++;
-        System.out.println("the no of duck objects created  = " + count);
+        if (size != chota || size != bada || size != biggest) {
+
+            throw new IllegalArgumentException("Invalid Input");
+
+        } else {
+
+            this.size = size;
+            count++;
+            System.out.println("the no of duck objects created  = " + count);
+
+        }
 
     }
 
@@ -29,6 +37,11 @@ public class Duck {
         if (biggest == size) {
             System.out.println("the duck bada swims slow");
             return;
+
+        } else {
+
+            throw new IllegalArgumentException("Invalid Input");
+
         }
 
     }
@@ -50,6 +63,9 @@ class TestDuck {
 
         Duck d4 = new Duck(Duck.bada);
         d4.swim();
+
+        Duck d5 = new Duck(20);
+        d5.swim();
 
     }
 
