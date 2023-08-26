@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Vehicle {
+public class Vehicle implements Comparable {
 
     String name;
     int capacity;
@@ -30,9 +30,28 @@ public class Vehicle {
 
     }
 
+    public int hashCode() {
+
+        return (name + capacity).hashCode();
+
+    }
+
     public String toString() {
 
         return name + capacity;
+
+    }
+
+    public int compareTo(Object o) {
+
+        if (o instanceof Vehicle) {
+
+            Vehicle v = (Vehicle) o;
+
+            return this.capacity - v.capacity;
+
+        }
+        throw new IllegalArgumentException("Invalid object reference");
 
     }
 
