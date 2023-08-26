@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -65,18 +66,20 @@ class TestStudent {
     public static void main(String[] args) {
 
         Student s1 = new Student("rama", 10);
-        Student s2 = new Student("seetha", 9);
-        Student s3 = new Student("hanuman", 8);
-        Student s4 = new Student("laxman", 9);
-        Student s5 = new Student("rama", 10);
+        Student s2 = new Student("seetha", 5);
+        Student s3 = new Student("hanuman", 12);
+        Student s4 = new Student("laxman", 18);
+        Student s5 = new Student("rama", 21);
 
         List<Student> l = new ArrayList<>();
+        StringNameComparator sc = new StringNameComparator();
         l.add(s1);
         l.add(s2);
         l.add(s3);
         l.add(s4);
         l.add(s5);
-        // System.out.println("elements in list " + l);
+        Collections.sort(l, sc);
+        System.out.println("elements in list " + l);
 
         Set<Student> st = new HashSet<>();
         st.add(s1);
@@ -86,13 +89,13 @@ class TestStudent {
         st.add(s5);
         // System.out.println("elements in set " + st);
 
-        TreeSet<Student> ts = new TreeSet<>();
+        TreeSet<Student> ts = new TreeSet<>(sc);
         ts.add(s1);
         ts.add(s2);
         ts.add(s3);
         ts.add(s4);
         ts.add(s5);
-        System.out.println("elements in treeSet " + ts);
+        // System.out.println("elements in treeSet " + ts);
 
     }
 
