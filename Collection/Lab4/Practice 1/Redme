@@ -1,0 +1,359 @@
+# Collections_Lab_4 
+
+## Simple 
+
+#### Q1. Print the number of times a word occurs in a sentence
+
+```
+SimpleQ1.java
+
+ - take a sentence as a input
+ - split that sentence
+ - compare each word with given word using .equals and increment the count
+
+```
+
+#### Q2 . Print the number of times a character occurs in a word
+
+```
+SimpleQ2.java
+
+- take a word
+- using using for loop and Strings.charAt() take one one character and compare with given character.
+- and increment the count
+
+```
+
+#### Q3.Print all words in a sentence with no duplicates printed
+
+```
+SimpleQ3.java
+
+- take a sentence as a input
+- split them into the words
+- using for loop add them to a Set with doesnot allow duplicates
+- using temparary string variable convert words into a sentence
+
+```
+
+#### Q4..Print only non-unique words in a sentence
+
+```
+SimpleQ4.java
+
+- take a sentence as a input
+- split the sentence using the String array
+- take 2 sets , 1 set  should contain set without duplicates and other with duplicates
+- sysout the other set which as duplicates
+
+```
+#### Q5.Print number of times each word occurs in a sentence
+
+```
+SimpleQ5.java
+
+a) using Collections
+- take a sentence as a input
+- split the sentence using the array
+- store in a list
+- use Collections.frequency to identify no of times
+
+b) using Collections
+- take a sentence as a input
+- split the sentence using the array
+- if occurance is null , add 1 
+- if occurance is greater than one add 1 to the existing occurance in for loop.
+
+```
+
+#### Q6.Take a number of strings as input from the user and sort them based on
+#### a.Length
+#### b.Alphabetical Order
+#### c.Reverse alphabetical order
+#### d.The number of vowels present in each word
+
+```
+SimpleQ6.java
+reverseSortOnAlphabetsComparator.java
+sortonAlphabetsComparator
+sortOnVowelsComparator.java
+stringLengthComparator.java
+
+```
+#### Q7 . Write a program to remove all the occurrences of a word from a sentence.
+
+```
+SimpleQ7.java
+
+- take a sentence as a input
+- split the sentence using the String array
+- take a word as a input
+- add the words from arroy to set
+- if set contains that word ,remove the word
+
+```
+
+#### 8.Suppose you have a set s containing some strings. Write a code fragment that uses an 
+#### iterator to print out each element in s. What is the advantage of using iterator over for 
+#### each loop?
+
+```
+
+SimpleQ8.java
+
+```
+
+#### 9.Suppose you have a set s containing some strings. Write a code fragment to compute 
+#### the result of concatenating all of these strings together
+
+```
+SimpleQ9.java
+
+```
+#### Q10.Write Java code to define a Set s. Insert 3 floating point numbers in s, and using 
+#### an iterator, find the sum of the numbers in s.
+
+```
+SimpleQ10.java
+
+```
+#### Q11 .Write a Java method that takes an array of float values and determines if all the 
+#### numbers are different from each other (that is, they are distinct)
+
+```
+SimpleQ11.java
+
+```
+#### Q12. Write a code snippet to convert an array into an ArrayList and an ArrayList 
+#### back into an array
+
+```
+SimpleQ12.java
+
+```
+
+#### Q13.Write a program to create a class and override equals(), hashCode() and toString() 
+#### so that the objects of your class can be compared by state and stored in hash based collection
+
+```
+Person.java
+
+```
+
+#### Q14.Write a program to remove duplicate elements from an arraylist without using Set
+```
+
+SimpleQ13.java
+
+```
+
+#### Q15. Given an ArrayList of integers every element appears twice except for one. 
+####      Return that element
+
+```
+SimpleQ14.java
+
+```
+
+## INTERMEDIATE
+
+#### Design and implement a stack using ArrayList
+
+```
+ArrayListStack.java
+
+```
+
+#### Design and implement a stack using LinkedList. Reverse the words in a sentence 
+#### using the implemented stack.
+
+```
+LinkedListStack.java
+
+```
+
+#### Write a program to sort a map based on its values
+
+```
+Q5.java
+
+```
+
+#### You recently read a blog post about the merits of using short sentences while writing. The article
+#### inspires you to write a program which will print the number of words in a sentence. When the
+#### exercise below is run, it will ask you to type a sentence in one line. The code will then split the
+#### sentence into words and store them in an ArrayList called 'words'. You have to write code that will
+#### print the number of items in the ArrayList.
+
+#### What we expect:
+#### If the line entered when the program is run is:
+#### "The brown fox is really lazy"
+
+#### We expect your code to print the number 6 to the system console 
+
+```
+noOfItems.java
+
+```
+
+#### Write a program to reverse the contents of an array:
+```
+
+Q8.java
+Without using Library methods
+
+```
+
+#### Write a program to find the smallest and largest integer in an array of integers
+
+```
+Q9.java
+
+Without using Library methods
+
+
+```
+
+#### Suppose you are using a map in your program, how would you count the number of times 
+#### the program calls the put() and get() methods?
+```
+Q12.java
+
+```
+#### Write a Java method that repeatedly selects and removes a random element from a
+#### list until the list holds no more elements.
+
+```
+Q10.java
+
+```
+
+#### Given a pattern and a string str, find if str follows the same pattern.
+#### Here follow means a full match, such that there is a bijection between a letter in pattern 
+#### and a non-empty word in str.
+
+#### Examples:
+#### 1. pattern = "abba", str = "dog cat cat dog" should return true.
+#### 2. pattern = "abba", str = "dog cat cat fish" should return false.
+#### 3. pattern = "aaaa", str = "dog cat cat dog" should return false.
+#### 4. pattern = "abba", str = "dog dog dog dog" should return false.
+
+```
+Pattern.java
+
+```
+
+#### The List al​ ​originally consisted of numbers from 1 to n. But unfortunately due to a data 
+#### error one of the numbers in the list got duplicated to another number in the list which resulted 
+#### in the repetition of one number and loss of another number and loss of another number. Given the  
+#### list al​, your task is to find the number that occurs twice and the missing number and return them 
+#### in an array.
+
+#### Ex:
+#### Input: al = [1,2,2,4]
+#### Output: [2,3]
+
+```
+missingInteger.java
+
+```
+
+#### Find the continuous sub ArrayList within an ArrayList (containing at least one number) 
+#### which has the largest sum and return that sum      
+
+
+```
+subArray.java
+
+```
+#### .We'll say that a value is "everywhere" in an ArrayList if for every pair of adjacent 
+#### elements in the List, at least one of the pair is that value. Return true if the given value 
+#### is everywhere in the array.Ex: if an ArrayList arr has the elements 1,2,1,3 the value 1 
+#### is everywhere
+
+```
+everywhere.java
+```
+
+#### Given a sentence return a sentence with words that can be typed using letters of 
+#### alphabet on only one row of American keyboard
+
+```
+AmercianKeyBoard.java
+
+```
+
+#### Given an expression string expression, write a program to examine whether the pairs 
+#### and the orders of “{“,”}”,”(“,”)”,”[“,”]” are correct in exp. For example, the program 
+#### should print true for exp = “[()]{}{[()()]()}” and false for exp = “[(])”
+
+```
+Parentheisis.java
+
+```
+
+#### Suppose you are designing a multiplayer game that has n ≥ 1000 players, numbered 1 to n,
+#### all interacting in an enchanted forest. The winner of this game is the first player who can  
+#### meet the other players at least once (ties are allowed). Assuming that there is a method 
+#### meet(i, j), which is called each time a player i meets a player j (with i 6= j), describe a 
+#### way to keep track of the pairs of meeting players and who is the winner.
+
+```
+MultiPlayerGame.java
+
+```
+
+#### Given a input int number, print out the number in words.
+#### Ex:
+#### If i/p is 1, program should print one.
+#### If i/p is 12, program should print twelve
+#### if i/p is 123, program should print one hundred and twenty three
+#### if i/p is 111324, program should print 1 lakh eleven thousand three hundred and twenty four
+
+```
+NumberToWordExample1.java
+
+```
+
+#### Write a short Java method that takes an ArrayList of int values and determines 
+#### if there is a pair of distinct elements of the ArrayList whose product is even
+
+```
+Q10a.java
+
+```
+
+#### 20.In English, we have a concept called root, which can be followed by some other 
+#### words to form another longer word - let's call this word successor. For example, 
+#### the root an, followed by other,which can form another word another.
+#### Now, given a dictionary consisting of many roots and a sentence. You need to 
+#### replace all the successor in the sentence with the root forming it. If a successor 
+#### has many roots can form it, replace it with the root with the shortest length.
+#### You need to output the sentence after the replacement.
+#### Ex:Input: dict = ["cat", "bat", "rat"]
+#### sentence = "the cattle was rattled by the battery"
+#### Output: "the cat was rat by the bat
+
+```
+root.java
+
+```
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

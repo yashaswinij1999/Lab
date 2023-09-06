@@ -1,0 +1,287 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Q8",
+      "request": "launch",
+      "mainClass": "Q8",
+      "projectName": "Practice 1_6a33e2a5"
+    },
+    {
+      "type": "java",
+      "name": "MultiplayerTest",
+      "request": "launch",
+      "mainClass": "MultiplayerTest",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "root",
+      "request": "launch",
+      "mainClass": "root",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "span",
+      "request": "launch",
+      "mainClass": "span",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "Parentheisis",
+      "request": "launch",
+      "mainClass": "Parentheisis",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "AmercianKeyBoard",
+      "request": "launch",
+      "mainClass": "AmercianKeyBoard",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "everywhere",
+      "request": "launch",
+      "mainClass": "everywhere",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "subArray",
+      "request": "launch",
+      "mainClass": "subArray",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "Q10a",
+      "request": "launch",
+      "mainClass": "Q10a",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "Q20",
+      "request": "launch",
+      "mainClass": "Q20",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "missingInteger",
+      "request": "launch",
+      "mainClass": "missingInteger",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "TestPattern",
+      "request": "launch",
+      "mainClass": "TestPattern",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "TestQ22",
+      "request": "launch",
+      "mainClass": "TestQ22",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "Q12",
+      "request": "launch",
+      "mainClass": "Q12",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "Q10",
+      "request": "launch",
+      "mainClass": "Q10",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "NumberToWordExample1",
+      "request": "launch",
+      "mainClass": "NumberToWordExample1",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "Q2",
+      "request": "launch",
+      "mainClass": "Q2",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "Q5",
+      "request": "launch",
+      "mainClass": "Q5",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "Q8",
+      "request": "launch",
+      "mainClass": "Q8",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "Q9",
+      "request": "launch",
+      "mainClass": "Q9",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "SimpleQ1",
+      "request": "launch",
+      "mainClass": "SimpleQ1",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "SimpleQ10",
+      "request": "launch",
+      "mainClass": "SimpleQ10",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "SimpleQ11",
+      "request": "launch",
+      "mainClass": "SimpleQ11",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "SimpleQ12",
+      "request": "launch",
+      "mainClass": "SimpleQ12",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "SimpleQ13",
+      "request": "launch",
+      "mainClass": "SimpleQ13",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "SimpleQ14",
+      "request": "launch",
+      "mainClass": "SimpleQ14",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "SimpleQ2",
+      "request": "launch",
+      "mainClass": "SimpleQ2",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "SimpleQ3",
+      "request": "launch",
+      "mainClass": "SimpleQ3",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "SimpleQ4",
+      "request": "launch",
+      "mainClass": "SimpleQ4",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "SimpleQ5",
+      "request": "launch",
+      "mainClass": "SimpleQ5",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "SimpleQ6",
+      "request": "launch",
+      "mainClass": "SimpleQ6",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "SimpleQ7",
+      "request": "launch",
+      "mainClass": "SimpleQ7",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "SimpleQ8",
+      "request": "launch",
+      "mainClass": "SimpleQ8",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "SimpleQ9",
+      "request": "launch",
+      "mainClass": "SimpleQ9",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "Test",
+      "request": "launch",
+      "mainClass": "Test",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "TestArrayListStack",
+      "request": "launch",
+      "mainClass": "TestArrayListStack",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "TestLinkedListStack",
+      "request": "launch",
+      "mainClass": "TestLinkedListStack",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "noOfItems",
+      "request": "launch",
+      "mainClass": "noOfItems",
+      "projectName": "Lab4_25d48ebc"
+    },
+    {
+      "type": "java",
+      "name": "prog3_23",
+      "request": "launch",
+      "mainClass": "prog3_23",
+      "projectName": "Lab4_25d48ebc"
+    }
+  ]
+}

@@ -23,5 +23,6 @@ public class Q9 {
 
         }
         System.out.println(str);
+
     }
 }
