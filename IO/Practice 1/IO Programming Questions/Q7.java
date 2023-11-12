@@ -18,6 +18,8 @@ public class Q7 {
         System.out.println("Enter the search string");
         String word = sc2.next();
 
+        
+
         occurancesOfString(path, word);
 
     }

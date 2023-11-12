@@ -1,0 +1,59 @@
+create table categories(slno int primary key identity,
+name varchar(200) not null unique,
+createddate timestamp);
+
+create table task(slno int primary key identity,
+name varchar(200) not null unique,
+desc varchar(500) not null unique,
+startdate date,
+enddate date,
+priorty_slno int foreign key references priorty_mastertable(slno),
+status_slno int foreign key references status_mastertable(slno))
+
+create table priorty_mastertable(slno int primary key identity,
+name varchar(200));
+
+create table status_mastertable(slno int primary key identity,
+name varchar(200));
+
+insert into categories(name,createddate)
+values('clothes,'2017-05-20');
+
+insert into categories(name,createddate)
+values('clothes','2017-10-16');
+
+insert into categories(name,createddate)
+values('grocies','2018-02-27');
+
+select * from categories
+
+insert into priorty_mastertable(name)
+values('high')
+
+insert into priorty_mastertable(name)
+values('medium')
+
+insert into priorty_mastertable(name)
+values('low')
+
+select * from priorty_mastertable
+
+insert into status_mastertable(name)
+values('started')
+
+insert into status_mastertable(name)
+values('wip')
+
+insert into status_mastertable(name)
+values('completed')
+
+select * from status_mastertable
+
+insert into task(name,desc,startdate,enddate,priorty_slno,status_slno)
+values('milk','buying milk','2020-05-27','2020-09-27',0,1);
+
+insert into task(name,desc,startdate,enddate,priorty_slno,status_slno)
+values('chudi','stiching','2021-07-28','2021-08-2',2,2);
+
+select * from task
+

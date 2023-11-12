@@ -117,7 +117,6 @@ class TestStudent {
         l.add(st5);
         l.add(st6);
         System.out.println("l ==== " + l);
-        
 
         Set<Student> s1 = new HashSet<>();
         s1.add(st1);
@@ -149,7 +148,7 @@ class StudentNameComparator implements Comparator {
             Student s1 = (Student) o1;
             Student s2 = (Student) o2;
 
-            return s1.compareTo(s2);
+            return s1.getName().compareTo(s2.getName());
         }
         throw new IllegalArgumentException("Invalid reference");
     }

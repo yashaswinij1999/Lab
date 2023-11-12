@@ -1,0 +1,22 @@
+create table Dept(Deptno int Primary Key,
+Dname VARCHAR (14),
+Loc VARCHAR (13))
+
+insert into dept values('10','sales','JayaNagar')
+insert into dept values('20','Operations','JayaNagar')
+insert into dept values('30','Technology','JayaNagar')
+insert into dept values('40','Marketing','RajajiNagar')
+insert into dept values('50','R&D','RajajiNagar')
+
+Select * from dept;
+
+create table DupDept(Deptno int Primary Key,
+Dname VARCHAR (14),
+Loc VARCHAR (13))
+
+insert into dupdept values('20','Operations','JayaNagar')
+insert into dupdept values('30','Technology','JayaNagar')
+insert into dupdept values('60','Innovation ','Malleswaram')
+insert into dupdept values('70','Logistics','Basavanagudi')
+
+Select * from DupDept;

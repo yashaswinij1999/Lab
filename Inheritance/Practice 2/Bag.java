@@ -79,14 +79,6 @@ class TestBag {
         Item it = b.getItem(1);
         System.out.println("the Item in that position = " + it);
 
-        try {
-            System.out.println(b.getTotal());
-
-        } catch (Exception e) {
-            // TODO: handle exception
-            e.printStackTrace();
-        }
-
     }
 
 }

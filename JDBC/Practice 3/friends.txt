@@ -1,0 +1,9 @@
+create table friends(slno int primary key identity,fname varchar(200) unique,lname varchar(200) not null);
+
+insert into friends(fname,lname)values(?,?);
+
+select * from friends
+
+update friends set fname = Amar where lname = gaire;
+
+delete * from friends where fname = Joseph;

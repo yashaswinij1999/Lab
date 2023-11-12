@@ -5,13 +5,13 @@ public class Song {
 
     public Song(String name) {
         this.setName(name);
-        System.out.println("param name only constr");
+        System.out.println("param name only constr in song");
     }
 
     public Song(String name, String lyrics) {
         this.setName(name);
         this.setLyrics(lyrics);
-        System.out.println("param constr");
+        System.out.println("param constr in song class");
     }
 
     public void setName(String name) {

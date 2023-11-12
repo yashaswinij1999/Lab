@@ -1,7 +1,7 @@
 public class Person {
 
-    String name;
-    int height;
+    private String name;
+    private int height;
 
     public Person(String name, int height) {
         this.name = name;
@@ -36,7 +36,7 @@ class TestPerson {
 
         Person p1 = new Person("ram", 5);
         Person p2 = new Person("ram", 5);
-        System.out.println(p1 == p2);
+        System.out.println("identity check = "+(p1==p2));
         System.out.println("p1.equals(p2) = " + p1.equals(p2));
 
     }

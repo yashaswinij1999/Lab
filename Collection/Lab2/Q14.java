@@ -10,9 +10,7 @@ public class Q14 {
         String sentence = "this this is is a what how what is ";
         String[] split = sentence.split(" ");
 
-        // int i = 0;
-        // int j = 0;
-
+        
         List<String> l = new ArrayList();
 
         for (String s : split) {

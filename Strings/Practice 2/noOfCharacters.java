@@ -1,4 +1,4 @@
-public class noOfOccurances {
+public class noOfCharacters {
 
     public static void main(String[] args) {
 

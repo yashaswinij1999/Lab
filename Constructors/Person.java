@@ -45,6 +45,10 @@ public class Person {
         }
         this.age = age;
     }
+
+    public int getAge() {
+        return age;
+    }
 }
 
 class TestPerson {

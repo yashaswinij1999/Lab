@@ -1,3 +1,6 @@
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class UtilMethods {
 
     public static boolean Validate(String name) {
@@ -32,6 +35,41 @@ public class UtilMethods {
 
     }
 
+    public static boolean validateDate(String Date) {
+
+        Date dt = null;
+
+        Date currDate = new Date();
+
+        SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
+        format.setLenient(false);
+
+        try {
+
+            dt = format.parse(Date);
+            return true;
+
+        } catch (Exception e) {
+
+            // TODO: handle exception
+            e.printStackTrace();
+            return false;
+
+        }
+
+    }
+
+    public static boolean checkIfDateIsINFuture(Date dt) {
+
+        Date date = new Date();
+
+        if (dt.before(date) || dt.equals(date)) {
+            return true;
+        }
+        return false;
+
+    }
+
 }
 
 class TestUtil {
@@ -39,6 +77,10 @@ class TestUtil {
     public static void main(String[] args) {
 
         System.out.println(UtilMethods.Validate("1dgh%^^"));
+
+        String s = "159-15-96";
+        Date dt = UtilMethods.validateDate(s);
+        System.out.println(dt);
 
     }
 

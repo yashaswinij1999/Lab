@@ -1,0 +1,8 @@
+java -jar hsqldb-2.7.2.jar
+
+java -cp hsqldb-2.7.2.jar org.hsqldb.Server --database test
+
+insert into enemies(name,reason) values(?,?);
+
+select * from enemies;
+delete * from enemies where slno = 0; 
