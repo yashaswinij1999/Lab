@@ -80,7 +80,7 @@ class TestLogger {
                     log2.log("rama");
                 };
             }.start();
-            System.out.println("main ending");
+            System.out.println(log1 == log2);
 
         } catch (Exception e) {
 

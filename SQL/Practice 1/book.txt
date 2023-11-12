@@ -1,0 +1,36 @@
+create table book(slno int primary key  identity,
+name varchar(200) unique not null,
+ISBNno char(22));
+
+create table chapter(slno int primary key identity,
+name varchar(200),
+startdate date,
+enddate date)
+
+insert into chapter(name,startdate,enddate)
+values('index','2020-08-12','2020-09-11');
+
+delete from chapter where slno = 3;
+
+select * from chapter
+
+create table Author(slno int primary key identity,
+name varchar(200),
+dob date,
+authorid char(15))
+
+insert into author(name,dob,authorid)
+values('narayanmurthy','1980-06-01','DE512')
+
+select * from author
+
+create table author_book(slno int primary key identity,
+authorslno int foreign key references author(slno),
+bookslno int foreign key references book(slno))
+
+insert(authorslno,bookslno)
+values(2,1)
+
+insert into author_book(authorslno,bookslno)
+values(2,1)
+

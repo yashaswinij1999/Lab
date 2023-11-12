@@ -52,19 +52,18 @@ class RamaJob extends Thread {
 
             System.out.println(" i = " + i + " name = " + currentThread().getName());
 
+            try {
+
+                Thread.sleep(500);
+
+            } catch (Exception e) {
+
+                // TODO: handle exception
+                e.printStackTrace();
+
+            }
+
         }
-        try {
-           
-            Thread.sleep(500);
-
-        } 
-        catch (Exception e) {
-
-            // TODO: handle exception
-            e.printStackTrace();
-
-        }
-        
 
     }
 }

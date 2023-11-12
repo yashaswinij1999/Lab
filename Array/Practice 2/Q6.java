@@ -5,7 +5,7 @@ public class Q6 {
         int[] arr1 = { 2, 6, 8 };
         int[] arr2 = { 9, 55, 40 };
         int value = maxInBothArroys(arr1, arr2);
-        System.out.println("the max value in the both the arrays = " + value);
+        System.out.println("the max value in both the arrays = " + value);
 
     }
 

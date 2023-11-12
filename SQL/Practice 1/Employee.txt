@@ -1,0 +1,95 @@
+Drop table Employee;
+
+Create table Empl(Empno int primary key not null,
+Ename VARCHAR (20),
+EmailId VARCHAR (20) Unique,
+Gender VARCHAR(10),
+Job VARCHAR (9),
+HireDate DATE,
+Mgr int,
+Salary int,
+Comm int,
+Deptno int foreign key references dept(deptno))
+
+insert into Empl values('1', 'Arun','arun@yahoo.com','M','Mgr','2010-09-20','10',10000,100,10)
+insert into Empl values('2', 'Ajay','ajayn@yahoo.com','M','Sales','2010-09-20','1',5000,100,10)
+insert into Empl values('3', 'Niranjan','neeru@yahoo.com','M','Sales','2011-09-25','1',5500,100,10)
+insert into Empl values('4', 'Nigam','nigee@yahoo.com','M','Sales','2011-09-25','1',6300,100,10)
+insert into Empl values('5', 'Varun','varunm@yahoo.com','M','Clrk','2012-10-25','1',4500,100,10)
+insert into Empl values('6', 'Sateesh','sateesh@yahoo.com','M','Mgr','2009-10-25','2',7500,100,50)
+insert into Empl values('7', 'Sampangi','sampoo@yahoo.com','M','R&D','2009-10-25','6',6500,100,50)
+insert into Empl values('8', 'Ramu','ramu@gmail.com','M','R&D','2010-10-25','6',6000,150,50)
+insert into Empl values('9', 'Raja','raja@gmail.com','M','Clrk','2010-10-25','6',4000,200,50)
+insert into Empl values('10', 'Varun','varun@gmail.com','M','R&D','2013-01-25','6',2000,150,50)
+insert into Empl values('11', 'Raja','raja123@gmail.com','M','Clrk','2010-10-25','6',4000,00,50)
+
+Select * from Empl
+
+--Display Employee's name, no, job, department no of department 10 and 50.
+Select Ename,Empno,Job,Deptno from Empl
+
+--Display information about all salesmen having salary less than 5500.
+select *from EMPL where salary<5500 and job='Sales'
+
+-- Display information about all employees of department 50 having salary greater than 2000.
+Select * from EMPL where Deptno = 50 and Salary > 2000
+
+----Display list of employees who don't take commission
+Select * from EMPL where Comm = 00
+
+--Display top 3 highest salaried Employees
+Select * from Empl order by Salary desc 
+
+--Display name and department of all Managers.
+Select Ename,Deptno from Empl where Job = 'Mgr'
+
+--Display name and department of all Clerks.
+Select Ename,Deptno from Empl where Job = 'Clrk'
+
+-Display name, job and salary of all the employees of department 50 who earn more than 2000 and less than 5000.
+select ename,job,salary from empl where deptno=50 and salary between 2000 and 5000
+
+--Display unique job of Employee table.
+select distinct job from empl
+
+--How many employees are there in each department?
+select count(*) NumEmp,deptno from empl group by deptno
+
+--Display the duplicate rows in employee table
+select count(ename),ename from empl group by ename having count(ename)>1
+
+--Exercise: 2 :Aggregate Functions
+--Find average and total salary for each job.
+select avg(salary)  as "Avg" , sum(salary) as "Total" from empl;
+
+--Find highest salary of all departments.
+select max(salary) as "highestsalary" form empl
+
+--Find minimum salary of all departments.
+select min(salary) as "leastsalary"  from empl
+
+--Find difference in highest and lowest salary for all departments
+select max(salary)-min(salary)"DifferenceSalary", deptno from empl group by deptno
+
+--Find average and total salary for all clerk and managers.
+select avg(salary)"Average Salary", sum(salary) "Total Salary"from empl where job in('Clrk','Mgr')
+
+--Count total different jobs held by dept no 10.
+select distinct job from empl where deptno = 10
+
+--Find highest and lowest salary for non-managerial job.
+select max(salary)as "mimnsalary",Min(salary) as "maxsalary"from empl where job!='Mgr'
+
+--Count employees and find average annual salary of each department.
+select count(empno),avg(salary)"avgsalary" from empl group by deptno
+
+--Which department has the highest annual remuneration bill?
+select top 1 sum(salary),deptno from empl group by deptno order by sum(salary)desc
+
+--List all the employees whose name ends with 'un'
+select * from empl where ename like '%un'
+
+--List only those rows where character 'A' is used atleast one time.
+select * from empl where ename like '%A%'
+
+

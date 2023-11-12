@@ -51,9 +51,9 @@ public class Q3 {
 
                 }
 
-                // sql = "delete from enemies where slno = 1";
-                // del = con.prepareStatement(sql);
-                // del.execute();
+                sql = "delete from enemies where slno = 1";
+                del = con.prepareStatement(sql);
+                del.execute();
 
             } else {
 

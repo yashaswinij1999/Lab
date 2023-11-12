@@ -3,8 +3,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Scanner;
 
-import javax.naming.spi.DirStateFactory.Result;
-
 public class Q4 {
 
     public static void main(String[] args) {

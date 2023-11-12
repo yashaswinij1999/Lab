@@ -1,0 +1,9 @@
+create table contactsApp(slno int primary key identity,name varchar(200) not null,email varchar(200) unique,dob Date,crtdate timestamp)
+create table Contact_PhoneInfo(slno int primary key identity,contact_slno int foreign key references contactsApp(slno),phone char(15) ,type varchar(200));
+
+insert into contactsapp(name,email,dob,crtdate) values('rama','rama@gmail.com','1999-09-09','2002-20-20');
+insert into Contact_PhoneInfo(contact_slno,phone,type)values(0,'7411254890','mobile');
+
+delete form contactsApp where name = ?;
+
+update contactsapp set name = bhima where slno = 15;

@@ -61,7 +61,7 @@ public class Car {
 
         if (fuel == 0) {
             isStarted = false;
-            System.out.println("the car stopped as there is no fuel");
+            System.out.println("the car stopped as there is no fuel in the car ");
         }
 
     }

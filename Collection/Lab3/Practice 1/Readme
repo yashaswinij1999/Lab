@@ -1,0 +1,108 @@
+# Collection Lab3 Questions
+
+#### Q1. Test basic methods of Scanner class usage
+
+```
+
+Q1.java.main();
+
+Steps:
+Create 2 Scanner objects wrapping System.in like this
+
+Scanner sc1 = new Scanner(System.in);
+Scanner sc2 = new Scanner(System.in);
+
+System.out.println("Enter a your name");
+String s1 = sc1.next(); // to read a single word input
+
+System.out.println("Enter your age ");
+int n = sc1.nextInt();
+
+String line = sc2.nextLine(); // sentence input print line
+
+```
+
+#### Q2. Build a Menu based program to allow the user to
+
+#### a) Add a friend name
+
+#### b) List the friend names
+
+#### c) Remove a friend name
+
+#### d) Search for friend names given a part string
+
+#### e) Sort the friend names based on i) alphabetical ii) lengthwise
+
+```
+Q2.java
+
+```
+
+#### Q3. Take a sentence and a word as input from the user and
+
+#### a) print how many occurrences you find of an input word in the sentence
+
+#### (use Collections.frequency() on a List where you add the words in the sentence)
+
+#### b) sort the sentence i) with duplicates ii) without duplicates and print
+
+#### c) sort the sentence using string length comparison
+
+#### d) remove all the occurrences of the word from the sentence
+
+```
+
+Input : That house is very small My son is small for his age
+
+Output:
+print how many occurrences you find of an input word in the sentence
+a) small = 2;
+
+b)sort the sentence i) with duplicates
+-   using Collections.sort
+
+ii) without duplicates
+-   using TreeSet
+
+
+```
+
+#### Q4. Create a Map<String,String>. Test basic working of methods of maps - put(key,val),
+
+#### get(key), remove(key), entrySet(), keySet(), values(), containsKey(), containsValue().
+
+```
+Q4.java
+
+```
+
+#### Q5. Given a sentence as input, find the number of occurrences of every word in it and 
+#### print it out (Use Maps).
+
+```
+Q5.java
+
+Input : Can you can a can as a canner can can a can
+
+Output:
+Can ===> 1;
+you ===> 1;
+can ===> 5;
+a   ===> 3;
+as  ===> 1;
+canner = 1;
+
+
+```
+
+#### Q6. Create a program to take in the country and capitals from the user as inputs. Then a 
+#### menu should be given to the user to be able to a) search for the capital given a country 
+#### name b) list the countries and their respective capitals. c) Sort the list output based on 
+#### country .
+
+```
+CountryandCapital.java
+
+
+```

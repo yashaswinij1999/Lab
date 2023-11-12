@@ -37,12 +37,13 @@ public class CountryandCapital {
     public void sortingOnValue() {
 
         Map<String, String> m1 = new TreeMap(new sortValueComparator(m));
+
         Set<Entry<String, String>> ts = m.entrySet();
 
         for (Entry<String, String> entry : ts) {
             m1.put(entry.getKey(), entry.getValue());
         }
-        System.out.println("sorting on value =" + m1);
+        // System.out.println("sorting on value =" + m1);
 
     }
 }
