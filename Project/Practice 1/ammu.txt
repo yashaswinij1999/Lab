@@ -1,0 +1,3 @@
+friends:ramya:radha:mahesh:sanju:geeta
+srivi:shashank:amma:appa:pali:amar:manju
+ammu:2002:yashu:yashu@gmail.com:srivi@gmail.com

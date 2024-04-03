@@ -27,7 +27,6 @@ if(!msg.equals("")){
 else{
 	
 	out.println("<h1>name : " + name + " email : " + email + "</h1>");
-	
 }
 %>
 </body>
