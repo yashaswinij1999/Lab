@@ -79,10 +79,6 @@ public class S6 {
 
     }
 
-}
-
-class Test {
-
     public static void main(String[] args) {
 
         System.out.println(S6.getNoOfDays(4, 2024));
