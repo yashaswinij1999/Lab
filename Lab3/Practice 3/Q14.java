@@ -3,7 +3,7 @@ public class Q14 {
 
     public static void main(String[] args) {
 
-        getFactorialOfNumber(5);
+        System.out.println(getFactorialOfNumber(5));
 
     }
 
@@ -11,12 +11,12 @@ public class Q14 {
 
         int fact = 1;
 
-        for (int i = num; i > 0; i++) {
+        for (int i = 1; i <= num; i++) {
 
             fact = fact * i;
 
         }
-        return  fact;
+        return fact;
 
     }
 
