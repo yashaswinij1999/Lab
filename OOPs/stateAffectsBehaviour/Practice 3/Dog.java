@@ -26,7 +26,7 @@ class Test {
 
         Dog d = new Dog();
 
-        d.bark(5);
+        d.bark(8);
         System.out.println(d.age);
 
     }
