@@ -222,3 +222,72 @@ class TestPerson {
 ```
 
 In the above example, Person object is created and dance functionality is invoked.
+
+4. [ WAM to test if a given number has a given digit in it](#)
+
+The Java Program is designed to test whether the given number has given digit in it.
+
+**OverView**
+The program provides the method `numberHasADigit` takes a number and digit as input.The method checks whether the given number has given digit in it. The method returns true if the digit is found, returns false if number doesnot contain the digit.
+
+**Method Signature**
+
+```
+ public static boolean numberHasADigit(int num, int digit) {
+
+
+
+    }
+
+```
+
+**Parameters**
+
+- int number - represents number.
+- int digit - represents the digit to be checked in the number.
+
+**Functionality**
+
+- Inside a function, intialise a variable to store the each value of provide number.
+- Create a while loop to iterate over the number, till number is greater than zero.
+- Inside a loop, take each value of the number by dividing it with 10.
+- Check whether value is equal to that digit.If yes return true, else return false.
+
+**Example**
+
+```
+public static boolean numberHasADigit(int num, int digit) {
+
+        int r = 0;
+
+        while (num > 0) {
+
+            r = num % 10;
+            if (r == digit) {
+                return true;
+            }
+            num /= 10;
+
+        }
+
+        return false;
+
+}
+
+
+```
+
+**Testing**
+
+Create a main method inside the Program, to test the functionality.
+
+```
+public static void main(String[] args) {
+
+        System.out.println(numberHasADigit(12458, 2));
+
+}
+
+```
+
+In the above example, a number and a digit is passed to the function, return true if digit is found, returns false if not found.
