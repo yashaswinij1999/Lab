@@ -182,5 +182,43 @@ The Person class represents the person object with name and age has its attribut
 - dance : Makes the person to dance, based on its age, if age is lesser than 30, the person dances bharathanatya, if the age is greater than 30, he does snake dance.
 
 ```
+public class Person {
+
+    String name;
+    int age;
+
+    public void dance(int age) {
+
+        if (age > 0) {
+
+            if (age < 30) {
+                System.out.println("The person does Bharatanatya");
+            } else {
+                System.out.println("The person does snake dance");
+            }
+
+        }
+
+    }
+
+}
 
 ```
+
+TestPerson Class
+
+The TestPerson class creates the Person object, and invokes its behaviour to test the functionality.
+
+```
+class TestPerson {
+
+    public static void main(String[] args) {
+
+        Person p = new Person();
+        p.dance(30);
+    }
+
+}
+```
+
+In the above example, Person object is created and dance functionality is invoked.
