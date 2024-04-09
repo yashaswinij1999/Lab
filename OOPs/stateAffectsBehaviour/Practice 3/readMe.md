@@ -46,7 +46,9 @@ public class Dog {
 }
 ```
 
-**Testing**
+**Tester**
+
+The Tester class can be used to create instances of the Dog class and test its functionality.
 
 ```
 class Test {
@@ -64,3 +66,5 @@ class Test {
 
 
 ```
+
+In the above example, A new Dog Object is created, and invoking the bark behaviour.
