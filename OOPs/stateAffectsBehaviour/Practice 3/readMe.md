@@ -164,3 +164,23 @@ class TestAccount {
 ```
 
 In this example, Account object is created with balance of `1000` and invoked the deposit and withdraw functionality.
+
+3.[Create a Person class. A Person has a name and age. A Person can dance. When you ask a](#)
+[Person to dance, if his age < 30, he will do barathnatya and if his age is >=30 then he will do snake](#)
+[dance](#)
+
+**Person Class**
+The Person class represents the person object with name and age has its attributes.The Person has ability to dance based on the its age.
+
+**Attributes**
+
+- name (String) : represents the name of the person.
+- age (int) : represents the age of the person.
+
+**Behaviour**
+
+- dance : Makes the person to dance, based on its age, if age is lesser than 30, the person dances bharathanatya, if the age is greater than 30, he does snake dance.
+
+```
+
+```
