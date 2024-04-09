@@ -68,3 +68,99 @@ class Test {
 ```
 
 In the above example, A new Dog Object is created, and invoking the bark behaviour.
+
+2. [Create an Account class. An Account has a balance (double), accNum (String). Implement](#)
+   [functionalities for withDraw(), deposit() and checkBalance() in Account class. Pay attention to what](#)
+   [will be the argument list and return data types for each method. Understand how state affects](#)
+   [behaviour and vice-versa here](#)
+
+**Account Class**
+
+- The Account class represents a Account with Balance and Account Number has its attributes. The Account has ability to deposit and withdraw the money.
+
+**Attributes**
+
+- balance (double) : It represents the balance in account.
+- accountNumber (String) : It represents the accountNumber of the Account.
+
+**Behaviour**
+
+- Deposit : If the deposited amount is greater than `zero', adds the amount to the Total Balance.
+- Withdraw : To withdraw from Account, the amount should be greater than zero and the account balance should be greater than amount.
+- CheckBalance : It returns the total balance of that particular account.
+
+```
+<!-- Account Class -->
+public class Account {
+
+    <!-- Instance variables -->
+    double bal;
+    String accNum;
+
+    <!-- deposit behaviour -->
+    public void deposit(double amt) {
+
+        if (amt > 0) {
+
+            bal = bal + amt;
+            System.out.println("Amount deposited sucessfully");
+
+        } else {
+            System.out.println("Amount is lesser than zero");
+        }
+
+    }
+
+    <!-- withdraw behaviour -->
+    public void withDraw(double amount) {
+
+        if (amount > 0) {
+
+            if (bal > amount) {
+
+                bal = bal - amount;
+                System.out.println("The amount withdrawn from account successfully");
+
+            } else {
+                System.out.println("balance is lesser than amount");
+
+            }
+
+        } else {
+
+            System.out.println("Amount is lesser than zero");
+
+        }
+
+    }
+
+    public double checkBalance() {
+        return bal;
+    }
+
+}
+
+```
+
+**Tester Class**
+
+Tester class used to test the instances of Account Object and test its functionality.
+
+```
+
+class TestAccount {
+
+    public static void main(String[] args) {
+
+        Account acc = new Account(1000);
+        acc.deposit(100);
+        acc.withDraw(50);
+        System.out.println(acc.checkBalance());
+
+    }
+
+}
+
+```
+
+In this example, Account object is created with balance of `1000` and invoked the deposit and withdraw functionality.
