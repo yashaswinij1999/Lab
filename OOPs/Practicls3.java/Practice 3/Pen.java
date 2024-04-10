@@ -43,6 +43,8 @@ class TestPen {
         p.write("shiva");
         System.out.println(p.inkQty);
 
+        p = null;
+
     }
 
 }

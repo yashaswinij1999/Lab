@@ -16,6 +16,8 @@ class TestQ2 {
         System.out.println(q.i);
         System.out.println(q.b);
 
+        q = null;
+
     }
 
 }

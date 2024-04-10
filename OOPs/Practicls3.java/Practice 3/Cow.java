@@ -25,6 +25,9 @@ class TestCow {
         c1.name = "gowri";
         c2.moo();
 
+        c1 = null;
+        c2  = null;
+
     }
 
 }
