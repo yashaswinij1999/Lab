@@ -64,3 +64,48 @@ class TestCow {
 ```
 
 In the above example, we have created the two instances of cow objects assigned the state and invoked the behaviour.
+
+2.[ Check if instance variables of type string, int and boolean are given ](#)
+[ default values. Check if local variables are given default values. ](#)
+[ How to do this? Create a class with 4 instance variables with String](#)
+[ boolean, int and boolean as datatypes. Create a Tester class with main](#)
+[ where you create an object and using reference print the instance ](#)
+[ variable values to monitor using SOP.](#)
+
+## Q2 Class
+
+Q2 class is created to check the default values of the instance variables.
+
+Example
+
+```
+
+public class Q2 {
+
+    String str;
+    int i;
+    boolean b;
+
+}
+
+```
+
+## Tester Class
+
+The Tester Class is creates new object and checks the default values of different datatypes.
+
+```
+class TestQ2 {
+
+    public static void main(String[] args) {
+
+        Q2 q = new Q2();
+        System.out.println(q.str);
+        System.out.println(q.i);
+        System.out.println(q.b);
+
+    }
+
+}
+
+```
