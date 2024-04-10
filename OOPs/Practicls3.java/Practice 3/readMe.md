@@ -109,3 +109,85 @@ class TestQ2 {
 }
 
 ```
+
+3.[A Pen has inkQty (int), colour (string) and can be used to write and](#)
+[refill. A text must be given for it to write. A quantity must be given to refill.](#)
+[If there is ink then the pen will write the text given to it (SOP). Refill](#)
+[works by taking in the int qty to add to the existing inkQty. First as a ](#)
+[class designer, on paper apply OOAD and arrive at the class design.](#)
+[Then create the class implementation and create a tester class to create](#)
+[2 pen objects, give it inkQty and ask it to write. First code this on your ](#)
+[own. If you cannot get it correctly, then see Pen.java and TestPen.java. ](#)
+[Then fix the code and rerun. Do not see the code first](#)
+
+## Pen Class
+
+The pen class is represents pen object, with inkQty and color has its state. Pen have a ability to refill and write.
+
+**Attributes**
+
+- inkQty(int) - represents the inkqty.
+- color (String) - represents the ink color.
+
+**Behaviour**
+
+- write(data) - If the inkQty is greater than zero, the pen writes the data.
+- refill(inkQty) - The refill takes the inkQty and adds to the existing inkQty to the Pen.
+
+Example
+
+```
+public class Pen {
+
+    int inkQty;
+    String color;
+
+    public void write(String data) {
+
+        if (inkQty > 0) {
+            System.out.println("Pen can write a data : " + data + " with " + color + " color ");
+        } else {
+            System.out.println("The ink qty is less, add ink to it");
+        }
+        inkQty--;
+
+    }
+
+    public void refill(int inkqty) {
+
+        if (inkqty > 0) {
+            inkQty = inkQty + inkqty;
+            System.out.println("The total inkQty : " + inkQty);
+        } else {
+            System.out.println("The ink qty provided is lesser than zero");
+        }
+
+    }
+
+}
+
+```
+
+**TestPen**
+The Testpen class is creates the pen object, assign state and invokes the behaviour.
+
+```
+class TestPen {
+
+    public static void main(String[] args) {
+
+        Pen p = new Pen();
+        p.inkQty = 2;
+        p.color = "black";
+        p.write("rama");
+        p.refill(2);
+        p.write("rama");
+        p.write("sita");
+        p.write("hanuman");
+        p.write("shiva");
+        System.out.println(p.inkQty);
+
+    }
+
+}
+```
