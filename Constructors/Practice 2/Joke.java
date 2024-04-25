@@ -40,11 +40,10 @@ class TestJoke {
 
     public static void main(String[] args) {
 
-        Joke j = new Joke("Hy");
-        System.out.println(j.getText());
-        j.print();
-        System.out.println("no of objects created : " + j.count);
-
+        // Joke j = new Joke("Hy");
+        // System.out.println(j.getText());
+        // j.print();
+        // System.out.println("no of objects created : " + j.count);
     }
 
 }
