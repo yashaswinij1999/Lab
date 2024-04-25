@@ -8,11 +8,15 @@ public class Human {
 
     public void commute(String place) {
 
-        c = new Car(5);
-        c.start();
-        c.drive();
-        c.stopped();
-        System.out.println("the person has reached the destination");
+        if (place == null || place.equals("")) {
+            throw new IllegalArgumentException("invalid place");
+        } else {
+            c = new Car(5);
+            c.start();
+            c.drive();
+            c.stopped();
+            System.out.println("the person has reached the destination");
+        }
 
     }
 
