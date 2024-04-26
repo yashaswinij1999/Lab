@@ -3,9 +3,11 @@ public class A {
 
     final int p;
     public static final int R = 5;
+    String name = "A";
 
     public A(int p) {
         this.p = p;
+        System.out.println(name);
     }
 }
 
