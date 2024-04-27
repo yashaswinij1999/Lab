@@ -33,13 +33,13 @@ class TestAB {
 
     public static void main(String[] args) {
 
-        B b = new B();
-        // System.out.println(b.name);
-        b.print();
+        // B b = new B();
+        // // System.out.println(b.name);
+        // b.print();
 
-        A1 a = new A1();
-        // System.out.println(a.name);
-        a.print();
+        // A1 a = new A1();
+        // // System.out.println(a.name);
+        // a.print();
     }
 
 }

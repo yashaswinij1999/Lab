@@ -15,8 +15,8 @@ class TestPerson {
 
     public static void main(String[] args) {
 
-        Person p = new Person(15, "rama");
-        System.out.println(p.name);
+        // Person p = new Person(15, "rama");
+        // System.out.println(p.name);
 
     }
 
