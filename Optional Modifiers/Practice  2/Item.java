@@ -53,10 +53,10 @@ class TestItem {
 
     public static void main(String[] args) {
 
-        Item i = new Item("Chocolate");
-        System.out.println(i.serialNo);
-        Item i2 = new Item(10.0,"Pen");
-        System.out.println(i2.serialNo);
+        // Item i = new Item("Chocolate");
+        // System.out.println(i.serialNo);
+        // Item i2 = new Item(10.0,"Pen");
+        // System.out.println(i2.serialNo);
 
     }
 

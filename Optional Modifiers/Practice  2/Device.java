@@ -50,10 +50,10 @@ class TestDevice {
 
     public static void main(String[] args) {
 
-        Device.test();
-        Person p = new Person();
-        MobilePhone m = new MobilePhone();
-        p.use(m);
+        // Device.test();
+        // Person p = new Person();
+        // MobilePhone m = new MobilePhone();
+        // p.use(m);
 
     }
 
