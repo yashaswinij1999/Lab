@@ -121,7 +121,7 @@ class TestDevice {
         System.out.println("d instance of Printer? " + (d instanceof Printer));
         System.out.println("d instance of TV? " + (d instanceof Tv));
         System.out.println("d instance of Device? " + (d instanceof Device));
-         */
+        
         Electrician e = new Electrician();
         Tv t = new Tv();
         // Printer p = new Printer();
@@ -130,7 +130,7 @@ class TestDevice {
         t.setName("tvvvy");
         t.doSomething();
         e.testDevice(t);
-
+         */
     }
 
 }

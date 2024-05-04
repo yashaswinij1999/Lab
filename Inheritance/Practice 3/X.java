@@ -80,6 +80,7 @@ class TestX {
 
     public static void main(String[] args) {
 
+        /* 
         X x = new X();
         System.out.println(x.a);
         System.out.println(x.b);
@@ -91,7 +92,7 @@ class TestX {
         System.out.println(y.d);
 
         Y y1 = new Y(99);
-
+         */
     }
 
 }
