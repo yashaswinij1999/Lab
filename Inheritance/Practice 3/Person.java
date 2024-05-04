@@ -3,7 +3,7 @@ public class Person {
 
     private String name;
     private int age;
-    String[] petNames = new String[20];
+    String[] petNames = new String[3];
     int count = 0;
 
     public void dance() {
@@ -23,6 +23,17 @@ public class Person {
         }
     }
 
+    public boolean searchName(String name) {
+
+        for (String s : petNames) {
+            if (s.equals(name)) {
+                return true;
+            }
+        }
+        return false;
+
+    }
+
     public String sing() {
 
         String s = "";
@@ -30,7 +41,7 @@ public class Person {
         for (int i = 0; i < petNames.length; i++) {
 
             int random = (int) (Math.random() * petNames.length);
-            s += petNames[random];
+            s += " " + petNames[random];
 
         }
         return s;
@@ -77,8 +88,11 @@ class TestPerson {
         String song = p.sing();
         System.out.println(song);
 
+        boolean result1 = p.searchName("rama");
+        System.out.println(result1);
 
-    
+        boolean result = p.searchName("yashu");
+        System.out.println(result);
 
     }
 
