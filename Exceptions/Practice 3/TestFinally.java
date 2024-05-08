@@ -10,8 +10,8 @@ public class TestFinally {
 
         } catch (Exception e) {
 
-            Person p = null;
-            p.eat();
+            // Person p = null;
+            // p.eat();
             System.out.println("in catch of m1() " + e.getMessage());
             return ++x;
 
