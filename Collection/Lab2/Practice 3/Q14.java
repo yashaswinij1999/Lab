@@ -6,6 +6,7 @@ public class Q14 {
 
     public static void main(String[] args) {
 
+        /* 
         String s = "this this is is a what how what is";
 
         String[] str = s.split(" ");
@@ -28,8 +29,8 @@ public class Q14 {
             }
 
         }
-        System.out.println(l);
-
+                 System.out.println(l);
+         */
     }
 
 }
