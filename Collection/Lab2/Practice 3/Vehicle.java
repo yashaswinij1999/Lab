@@ -2,7 +2,7 @@
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class Vehicle {
+public class Vehicle implements Comparable {
 
     String name;
     int capacity;
@@ -30,6 +30,21 @@ public class Vehicle {
     public int hashCode() {
         System.out.println("in hashcode method");
         return (name + capacity).hashCode();
+    }
+
+    public String toString() {
+        return "name : " + name + " capacity : " + capacity;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        // TODO Auto-generated method stub
+        if (o instanceof Vehicle) {
+            Vehicle v = (Vehicle) o;
+            return this.capacity - v.capacity;
+
+        }
+        throw new IllegalArgumentException("INVALID OBJECT TYPE");
     }
 
 }
