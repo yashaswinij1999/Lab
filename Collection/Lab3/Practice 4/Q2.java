@@ -10,6 +10,7 @@ public class Q2 {
 
     public static void main(String[] args) {
 
+        /* 
         Scanner sc1 = new Scanner(System.in);
         Scanner sc2 = new Scanner(System.in);
 
@@ -111,6 +112,7 @@ public class Q2 {
 
             }
         }
+         */
     }
 
 }
