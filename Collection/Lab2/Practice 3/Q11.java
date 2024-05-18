@@ -7,6 +7,7 @@ public class Q11 {
 
     public static void main(String[] args) {
 
+        /* 
         Student s1 = new Student("rama", "rama@1", 10);
         Student s2 = new Student("sita", "sita@11", 20);
         Student s3 = new Student("shama", "shamaa@12", 15);
@@ -27,6 +28,7 @@ public class Q11 {
 
         Collections.sort(l, sad);
         System.out.println(l);
+         */
     }
 
 }
