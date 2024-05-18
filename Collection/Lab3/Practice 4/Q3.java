@@ -2,6 +2,7 @@
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 import java.util.TreeSet;
@@ -30,9 +31,28 @@ public class Q3 {
         }
         System.out.println("we are able to find the word : " + word + " " + Collections.frequency(c, word) + " no of times");
 
-        Collections.sort(c);
-        System.out.println(" sorting with duplicates " + c);
-        System.out.println(" sorting without duplicates " + st);
+        // Collections.sort(c);
+        // System.out.println(" sorting with duplicates " + c);
+        // System.out.println(" sorting without duplicates " + st);
+        // StringLengthComparator slc = new StringLengthComparator();
+        // Collections.sort(c, slc);
+        // System.out.println(" sorting based on length " + c);
+        Iterator it = c.iterator();
+
+        while (it.hasNext()) {
+            Object e = it.next();
+
+            if (e instanceof String) {
+
+                String s = (String) e;
+
+                if (s.equals(word)) {
+                    it.remove();
+                }
+
+            }
+        }
+        System.out.println(" after removing the word " + c);
 
     }
 
