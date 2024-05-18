@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.TreeSet;
@@ -53,10 +54,45 @@ public class Student implements Comparable {
 
 }
 
+class StringNameComparator implements Comparator {
+
+    public int compare(Object e1, Object e2) {
+
+        if (e1 instanceof Student && e2 instanceof Student) {
+
+            Student s1 = (Student) e1;
+            Student s2 = (Student) e2;
+
+            return s1.name.compareTo(s2.name);
+
+        }
+        throw new IllegalArgumentException("invalid object type in string name comparator");
+    }
+
+}
+
+class StudentAgeDescend implements Comparator {
+
+    public int compare(Object e1, Object e2) {
+
+        if (e1 instanceof Student && e2 instanceof Student) {
+
+            Student s1 = (Student) e1;
+            Student s2 = (Student) e2;
+            return s2.age - s1.age;
+
+        }
+        throw new IllegalArgumentException("invalid object type in string age comparator");
+
+    }
+
+}
+
 class TestStudent {
 
     public static void main(String[] args) {
 
+        /* 
         Student s1 = new Student("rama", "rama@1", 10);
         Student s2 = new Student("sita", "sita@11", 20);
         Student s3 = new Student("shama", "shamaa@12", 15);
@@ -64,9 +100,9 @@ class TestStudent {
         Student s5 = new Student("coma", "coma@1", 30);
         Student s6 = new Student("rama", "rama@1", 10);
 
-        // ArrayList l = new ArrayList<>();
-        // HashSet l = new HashSet<>();
-        // LinkedHashSet l = new LinkedHashSet();
+        ArrayList l = new ArrayList<>();
+        HashSet l = new HashSet<>();
+        LinkedHashSet l = new LinkedHashSet();
         
         TreeSet l = new TreeSet<>();
         l.add(s1);
@@ -84,6 +120,6 @@ class TestStudent {
             }
 
         }
-
+         */
     }
 }
