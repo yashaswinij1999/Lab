@@ -24,7 +24,7 @@ public class Q4 {
                 }
 
             }
-            if(count > 1){
+            if (count > 1) {
                 l1.add(str[i]);
             }
 
