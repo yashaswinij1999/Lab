@@ -116,12 +116,15 @@ class TestLetterCounterJob {
             // t.start();
             // t.join();
             // System.out.println(l.getCount());
-            NextPrimeJob j = new NextPrimeJob(2);
-            Thread t2 = new Thread(j);
-            t2.start();
-            t2.join();
-            System.out.println(j.getPrime());
-
+            // long l1 = System.currentTimeMillis();
+            // System.out.println("time took to run this program " + l1);
+            // NextPrimeJob j = new NextPrimeJob(2);
+            // Thread t2 = new Thread(j);
+            // t2.start();
+            // t2.join();
+            // System.out.println(j.getPrime());
+            // long l2 = System.currentTimeMillis();
+            // System.out.println("time took to run this program " + l2);
         } catch (Exception e) {
 
             // TODO: handle exception
