@@ -1,9 +1,9 @@
 
 public class Counter {
 
-    private static int count;
+    private int count;
 
-    public synchronized int incrementCount() {
+    public int incrementCount() {
         count++;
 
         try {
