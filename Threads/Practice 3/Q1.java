@@ -1,62 +1,43 @@
+
 public class Q1 extends Thread {
 
     public void run() {
 
+        String str = null;
+
         try {
 
-            String s = null;
-            System.out.println(s.length());
+            for (int i = 1; i <= 100; i++) {
 
-            for (int i = 0; i < 10; i++) {
-
-                if (i % 2 == 0) {
-                    System.out.println(i + " " + Thread.currentThread().getName());
-                    Thread.sleep(500);
-
-                }
+                System.out.println(i + " " + Thread.currentThread().getName());
+                System.out.println(str.length());
+                Thread.sleep(500);
 
             }
 
-        } catch (NullPointerException et) {
-
-            et.printStackTrace();
-
         } catch (Exception e) {
-
             // TODO: handle exception
             e.printStackTrace();
-
         }
 
     }
 
 }
 
-class TestQ1 {
+class Test {
 
     public static void main(String[] args) {
 
-        try {
-
-            System.out.println("main starting");
-            Q1 q = new Q1();
-            q.setName("ramu");
-            // q.setPriority(10);
-            q.start();
-            System.out.println("main ending");
-
-            Q1 q1 = new Q1();
-            q1.setName("raja");
-            // q1.setPriority(1);
-            q1.start();
-
-        } catch (Exception e) {
-
-            // TODO: handle exception
-            e.printStackTrace();
-
-        }
-
+        // System.out.println("before printing main");
+        // Q1 q1 = new Q1();
+        // q1.setName("Rama");
+        // q1.setPriority(10);
+        // q1.start();
+        // Q1 q2 = new Q1();
+        // q2.setName("Raju");
+        // q2.setPriority(1);
+        // q2.start();
+        // System.out.println("after printing main");
     }
 
 }

@@ -1,11 +1,12 @@
+
 public class ParamJob implements Runnable {
 
-    int outPut;
+    int outPut = 0;
 
     @Override
     public void run() {
-        // TODO Auto-generated method stub
-        outPut = (int) (Math.random() * 1000000);
+
+        this.outPut = (int) (Math.random() * 1000000);
 
     }
 
@@ -15,24 +16,20 @@ public class ParamJob implements Runnable {
 
 }
 
-class TestParam {
+class TestParamJob {
 
     public static void main(String[] args) {
 
         try {
-
-            ParamJob p = new ParamJob();
-            Thread t = new Thread(p);
+            ParamJob j = new ParamJob();
+            Thread t = new Thread(j);
             t.start();
             t.join();
-
-            System.out.println(p.getOutPut());
+            System.out.println(j.getOutPut());
 
         } catch (Exception e) {
-
             // TODO: handle exception
             e.printStackTrace();
-
         }
 
     }
