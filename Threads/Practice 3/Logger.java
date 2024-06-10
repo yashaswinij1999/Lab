@@ -26,32 +26,43 @@ public final class Logger {
 
     public void log(String data) {
 
-        File f = new File(path);
-        BufferedWriter bw = null;
+        new Thread(new Runnable() {
 
-        System.out.println(f.getName());
+            @Override
+            public void run() {
+                // TODO Auto-generated method stub
 
-        try {
+                File f = new File(path);
+                BufferedWriter bw = null;
 
-            bw = new BufferedWriter(new FileWriter(f, true));
-            bw.write(data);
-            bw.newLine();
+                System.out.println(f.getName());
 
-        } catch (Exception e) {
+                try {
 
-            // TODO: handle exception
-            e.printStackTrace();
+                    bw = new BufferedWriter(new FileWriter(f, true));
+                    bw.write(data);
+                    bw.newLine();
 
-        } finally {
-            try {
-                if (bw != null) {
-                    bw.close();
+                } catch (Exception e) {
+
+                    // TODO: handle exception
+                    e.printStackTrace();
+
+                } finally {
+                    try {
+                        if (bw != null) {
+                            bw.close();
+                        }
+                    } catch (Exception e) {
+                        // TODO: handle exception
+                        e.printStackTrace();
+                    }
                 }
-            } catch (Exception e) {
-                // TODO: handle exception
-                e.printStackTrace();
+
             }
-        }
+
+        }).start();
+
     }
 
 }
