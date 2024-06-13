@@ -26,6 +26,16 @@ public class Menu
 			sql = "insert into friends(fname,lname) values(?,?)";
 			ps_in= con.prepareStatement(sql);
 			
+			sql = "select fname,lname from friends";
+			ps_sel = con.prepareStatement(sql);
+			
+			sql = "delete from friends where fname=?";
+			ps_del = con.prepareStatement(sql);
+			
+			sql = "update friends set fname=? where lname = ?";
+			ps_up = con.prepareStatement(sql);
+			
+			
 			while(ch != 5) 
 			{
 				System.out.println("");
@@ -56,18 +66,44 @@ public class Menu
 					ps_in.setString(1, fname);
 					ps_in.setString(2, lname);
 					ps_in.execute();
+					System.out.println("inserted successfully");
 				    break;
 				
 				case 2: 
 					System.out.println("to select");
+					ps_sel.execute();
+					rs = ps_sel.getResultSet();
+					while(rs.next()) 
+					{
+						fname = rs.getString("fname");
+						lname = rs.getString("lname");
+						System.out.println("fname : " + fname + " lname :" + lname);
+					}
 					break;
 		
 				case 3: 		
-					System.out.println("to delete");				
+					System.out.println("to delete");	
+					System.out.println("enter name which you want to delete");
+					fname = sc1.next();
+					
+					ps_del.setString(1, fname);
+					ps_del.execute();
+					System.out.println("removed successfully");
 				    break;
 				
 				case 4:
 					System.out.println("to update");
+					
+					System.out.println("enter name you to edit");
+					fname = sc1.next();
+					
+					System.out.println("enter lname");
+					lname = sc1.next();
+					
+					ps_up.setString(1, fname);
+					ps_up.setString(2, lname);
+					ps_up.execute();
+					System.out.println("update successfully");
 					break;
 					
 				default:
