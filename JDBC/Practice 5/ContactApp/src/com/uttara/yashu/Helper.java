@@ -42,7 +42,7 @@ public class Helper {
 		}
 		
 	}
-	public static void closeConnection(PreparedStatement ps)
+	public static void closePreparedStatement(PreparedStatement ps)
 	{
 		try 
 		{
@@ -57,7 +57,7 @@ public class Helper {
 		}
 		
 	}
-	public static void closeConnection(ResultSet rs)
+	public static void closeResultSet(ResultSet rs)
 	{
 		try 
 		{
