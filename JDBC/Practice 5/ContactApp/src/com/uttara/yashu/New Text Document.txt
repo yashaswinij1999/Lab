@@ -1,0 +1,7 @@
+create table contacts(slno int primary key identity ,name varchar(200) not null, email varchar(200) not null, DOB date, createdDate date)
+
+create table contacts_phno(slno int primary key identity, contacts_slno int foreign key references contacts(slno), type varchar(200) not null)
+
+insert into contacts insert(name,email,DOB,createdDate) values('yashu','yashu@gmail.com','1999-09-19','2024-06-14')
+
+insert into contacts_phno(contacts_slno,type) values (0,'mobile')
