@@ -35,8 +35,8 @@ public class ContactApp
 				con.setAutoCommit(false);
 				System.out.println("");
 				System.out.println("Press 1 to insert");
-				System.out.println("Press 2 to select");
-				System.out.println("Press 3 to delete");
+				System.out.println("Press 2 to delete");
+				System.out.println("Press 3 to select");
 				System.out.println("Press 4 to update");
 				System.out.println("Press 5 to exit");
 				System.out.println("");
@@ -123,17 +123,90 @@ public class ContactApp
 					break;
 					
 				case 2:
-					System.out.println("to select");
-					sql = "select *  from contacts";
-					ps_sel = con.prepareStatement(sql);
+					System.out.println("to delete");
+					System.out.println("enter name which you to delete");
+					name = sc1.next();
+					
+					try 
+					{
+						Helper.deleteDataFromContactsInfo(con, name);
+						Helper.deleteFromContacts(con, name);
+						System.out.println("deleted successfully");
+					} catch (Exception e) {
+						// TODO: handle exception
+						e.printStackTrace();
+					}			
 					break;
 					
 				case 3:
-					System.out.println("to delete");
+					System.out.println("to select");
+					sql = "select *  from contacts";
+					ps_sel = con.prepareStatement(sql);
+					ps_sel.execute();
+					
+					rs = ps_sel.getResultSet();
+					while(rs.next()) 
+					{
+						name = rs.getString("name");
+						email = rs.getString("email");
+						dt = rs.getDate("dob");
+						crd = rs.getDate("createdDate");
+						System.out.println("name : " + name + " email : " + email + " dt : " + dt + " crd : " + crd);
+						
+					}
+					
+					while(ch != 2) 
+					{
+						System.out.println("");
+						System.out.println("Press 1 to select data form contacts_PhoneNo ");
+						System.out.println("Press 2 to exit");
+						System.out.println("");
+						System.out.println("enter your choice");
+						ch = sc1.nextInt();
+						
+						switch (ch) 
+						{
+						case 1:
+							sql = "select * from contacts_phno";
+							ps_sel = con.prepareStatement(sql);
+							ps_sel.execute();
+							rs = ps_sel.getResultSet();
+							
+							while(rs.next()) 
+							{
+								slno = rs.getInt("contacts_slno");
+								phoneNo = rs.getString("phoneNo");
+								type = rs.getString("type");
+								System.out.println("slno : " + slno + " phoneNo : " + phoneNo +  " type : " + type);
+								
+							}
+							break;
+							
+						default:
+							System.out.println("invalid choice");
+							break;
+							
+						case 2:
+							System.out.println("go back");
+							
+						}
+					
+					}
 					break;		
 					
 				case 4:
 					System.out.println("to update");
+					System.out.println("enter new email which you want to set");
+					email = sc1.next();
+					
+					System.out.println("enter name ");
+					name = sc1.next();
+					
+					sql = "update contacts set email = ? where name = ?";
+					ps_up = con.prepareStatement(sql);
+					ps_up.setString(1, email);
+					ps_up.setString(2, name);
+					ps_up.execute();
 					break;
 					
 				default:
