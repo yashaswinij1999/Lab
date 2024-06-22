@@ -1,0 +1,3 @@
+create table users (slno int primary key identity, name varchar(200) unique, email varchar(200) not null, pass char(10) not null)
+
+insert into users(name,email,pass) values('yashu','yashujpa','yash')
