@@ -1,0 +1,1 @@
+name : rama email : rama@gmail.com password : rama repeat password : rama
